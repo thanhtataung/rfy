@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{ced4c67a-7d4f-4ac6-95b4-477bea52b013}"
+       Name="ProjectName"
+       DisplayName="Project Name"
+       Required="FALSE"
+       EnforceUniqueValues="FALSE"
+       Type="Lookup"
+       ShowField="Title"
+       List="Lists/Projects"
+       Overwrite="TRUE"
+       Group="Custom Site Columns" >
+  </Field>
+</Elements>

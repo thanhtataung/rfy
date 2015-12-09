@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="009c49a1-94b5-4ab6-a108-aab2ed8c4b0b" solutionId="009c49a1-94b5-4ab6-a108-aab2ed8c4b0b" resetWebServer="false" sharePointProductVersion="15.0" name="InstantiateListLib" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="7fb908fd-3022-48b9-b921-c91a75de8e7c" />
+  </features>
+</package>

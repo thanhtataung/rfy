@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{408BAB81-2B5B-4569-B092-066C972AB6C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InstantiateListLib</RootNamespace>
+    <AssemblyName>InstantiateListLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Features\CreateListLib\CreateListLib.feature">
+      <FeatureId>{7fb908fd-3022-48b9-b921-c91a75de8e7c}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{009c49a1-94b5-4ab6-a108-aab2ed8c4b0b}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Projects\ProjectsInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3821ca7e-2d1b-4f38-befa-4b724c981bf0}</SharePointProjectItemId>
+    </None>
+    <None Include="Projects\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5f6cb292-074d-4ef2-93e7-dd50067c2f41}</SharePointProjectItemId>
+    </None>
+    <None Include="Report\ProjectManager\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e89b5fe5-16ae-47b1-b71b-ae496fca60ab}</SharePointProjectItemId>
+    </None>
+    <None Include="Report\ProjectName\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cafdca4b-b580-44ff-8a59-b91d3f8d632c}</SharePointProjectItemId>
+    </None>
+    <None Include="Report\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{58aa2ce5-7968-4f47-a2db-6ecd2ed2fc73}</SharePointProjectItemId>
+    </None>
+    <None Include="Report\Title\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5583241a-5fcd-4385-b90b-5e64d2357ada}</SharePointProjectItemId>
+    </None>
+    <None Include="Report\WeekStartDate\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4171a5ad-c102-4582-9798-c8de0e4fb285}</SharePointProjectItemId>
+    </None>
+    <None Include="WeeklyReports\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c8b0ec8a-2fd0-4bee-abd2-a2cb686c7a41}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Features\CreateListLib\CreateListLib.Template.xml">
+      <DependentUpon>CreateListLib.feature</DependentUpon>
+    </Content>
+    <Content Include="Projects\Elements.xml" />
+    <Content Include="Projects\ProjectsInstance\Elements.xml" />
+    <Content Include="Projects\Schema.xml" />
+    <Content Include="Report\Elements.xml" />
+    <Content Include="Report\ProjectManager\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Report\ProjectName\Elements.xml" />
+    <Content Include="Report\Title\Elements.xml" />
+    <Content Include="Report\WeekStartDate\Elements.xml" />
+    <Content Include="WeeklyReports\EditDlg.htm" />
+    <Content Include="WeeklyReports\Elements.xml" />
+    <Content Include="WeeklyReports\FileDlg.htm" />
+    <Content Include="WeeklyReports\Repair.aspx" />
+    <Content Include="WeeklyReports\Schema.xml" />
+    <Content Include="WeeklyReports\Upload.aspx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup>
+    <BuildDependsOn>$(BuildDependsOn);CreatePackage</BuildDependsOn>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
